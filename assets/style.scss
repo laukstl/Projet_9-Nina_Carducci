@@ -1,42 +1,3 @@
-/* import '@splidejs/splide/css'; */
-
-/* latin */
-/* @font-face {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url("./assets/fonts/Inter/Inter-Regular.ttf") format('ttf');
-}
-@font-face {
-	font-family: 'Spectral';
-	font-style: italic;
-	font-weight: 300;
-	font-display: swap;
-	src: url("./assets/fonts/Spectral/Spectral-LightItalic.ttf") format('ttf');
-}
-@font-face {
-	font-family: 'Spectral';
-	font-style: italic;
-	font-weight: 400;
-	font-display: swap;
-	src: url("./assets/fonts/Spectral/Spectral-Italic.ttf") format('ttf');
-}
-@font-face {
-	font-family: 'Spectral';
-	font-style: italic;
-	font-weight: 800;
-	font-display: swap;
-	src: url("./assets/fonts/Spectral/Spectral-ExtraBoldItalic.ttf") format('ttf');
-}
-@font-face {
-	font-family: 'Spectral';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url("./assets/fonts/Spectral/Spectral-Regular.ttf") format('ttf');
-} */
-
 @font-face {
 	font-family: 'Inter';
 	font-style: normal;
@@ -180,6 +141,34 @@ span.swiper-pagination-bullet {
 #gallery {
 	max-width: 1425px;
 	margin: auto;
+}
+
+
+#gallery .controls {
+	// text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+#gallery button {
+	border: none;
+	padding: 0.5rem 1rem; //NOTE: APPROXIMATIF
+	font-size: 15px;
+	font-weight: 500;
+	background: none;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+#gallery button:active {
+	background-color: #BEB45A;
+}
+
+#gallery button.selected {
+	color: white;
+	background-color: #BEB45A;
 }
 
 .gal-tile {
@@ -334,6 +323,7 @@ span.swiper-pagination-bullet {
 	padding-bottom: 100%;
 
 }
+
 /* .gallery-item {
 	position: absolute;
 	width: 100%;
@@ -341,6 +331,7 @@ span.swiper-pagination-bullet {
 	object-fit: cover;
 	padding: .5em;
 } */
+
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;

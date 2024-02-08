@@ -1,6 +1,3 @@
-/* eslint-disable no-multiple-empty-lines */
-/* eslint-disable @typescript-eslint/indent */
-/* eslint-disable @typescript-eslint/semi */
 // Init Swipper
 const $lgSwiper = document.getElementById('lg-swipper')
 const swiper = new Swiper('.swiper', {
@@ -24,7 +21,8 @@ const swiper = new Swiper('.swiper', {
   },
 
   pagination: {
-    el: '.swiper-pagination'
+    el: '.swiper-pagination',
+    clickable: true
   }
 })
 
@@ -49,10 +47,19 @@ if (lgElement !== null) {
 document.addEventListener('DOMContentLoaded', () => {
     const galButtons = document.querySelectorAll('#gallery button');
     const galPictures = document.querySelectorAll('#gallery a');
+    let selectedButton = null;
 
-    galButtons.forEach((buttons) => {
-        buttons.addEventListener('mouseup', () => {
-            const filter = buttons.getAttribute('data-filter');
+    galButtons.forEach((button) => {
+        button.addEventListener('mouseup', () => {
+            const filter = button.getAttribute('data-filter');
+
+            if (selectedButton) {
+                selectedButton.classList.remove('selected');
+            }
+
+            button.classList.add('selected');
+            selectedButton = button;
+
             galPictures.forEach((picture) => {
                 const pictAttr = picture.getAttribute('data-tag');
                 if (filter === 'tous' || pictAttr === filter) {
@@ -60,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     picture.style.display = 'none';
                 }
-            })
-        })
-    })
-})
+            });
+        });
+    });
+});
