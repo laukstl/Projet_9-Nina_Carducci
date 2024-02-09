@@ -18,16 +18,20 @@
 	<title>Nina Carducci - Photographe en Île-de-France</title>
 
 	<!-- Swiper -->
-	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+	<!-- <link rel="preload" href="./assets/swiper/swiper-bundle.min.css" as="style"> -->
+	<script defer src="./assets/swiper/swiper-bundle.min.js"></script>
+	<!-- <link rel="stylesheet" href="./assets/swiper/swiper-bundle.min.css"> -->
+
 	<!-- lightgallery -->
-	<script defer src="./assets/lightgallery/lightgallery.min.js"></script>
 	<link type="text/css" rel="stylesheet" href="./assets/lightgallery/css/lightgallery.min.css">
+	<script defer src="./assets/lightgallery/lightgallery.min.js"></script>
 
 	<!-- default -->
-	<script type="module" src="./assets/js/scripts.prod.js"></script>
 	<link rel="stylesheet" href="./assets/css/style.min.css">
+	<script defer type="module" src="./assets/js/scripts.prod.js"></script>
 
 	<!-- social cards -->
 	<meta name="twitter:card" content="summary" />
@@ -365,7 +369,7 @@
 				<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
 			</div>
 			<div class="service__price">
-				<p class="price">350€/demi journée</p>
+				<div class="price">350€/demi journée</div>
 				<span>Matériel, déplacement inclus</span>
 			</div>
 
@@ -376,7 +380,7 @@
 				<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
 			</div>
 			<div class="service__price">
-				<p class="price">50€/photo</p>
+				<div class="price">50€/photo</div>
 				<span>2 AR par photo</span>
 			</div>
 		</div>

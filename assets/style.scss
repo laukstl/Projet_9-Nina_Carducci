@@ -96,6 +96,40 @@ h3 {font-size: calc(1.3rem + 0.6vw);}
 
 /* end Imported from Bootstrap */
 
+
+// Swiper
+// swiper-slide swiper-slide-active
+// .swiper-slide {
+	// border: 1px red solid;
+	// width: 100%;
+	// height: 100%;
+	// height: 888px;
+
+    // @media(min-width: 413px) {
+	// 	height: 191px;
+	// }
+	// @media(min-width: 576px) {
+	// 	height: 266px;
+	// }
+	// @media(min-width: 768px) {
+	// 	height: 355px;
+	// }
+	// @media(min-width: 992px) {
+	// 	height: 458px;
+	// }
+	// @media(min-width: 1200px) {
+	// 	height: 554px;
+	// }
+	// @media(min-width: 1400px) {
+	// 	height: 647px;
+	// }
+
+	// & img {
+	// 	object-fit: cover;
+	// 	width: 100%;
+	// }
+// }
+
 .swiper-button-next, .swiper-button-prev {
 	color: white;
 	filter: drop-shadow(0 0 0.75rem black);
@@ -116,11 +150,6 @@ span.swiper-pagination-bullet {
 	// filter: drop-shadow(0 0 0.75rem black);
 }
 
-// Swiper
-// .swiper {
-	// width: 600px;
-	// height: 300px;
-//   }
 
 /* GALLERY */
 #lightgallery {
@@ -141,34 +170,33 @@ span.swiper-pagination-bullet {
 #gallery {
 	max-width: 1425px;
 	margin: auto;
-}
 
+	.controls {
+		// text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+		margin-bottom: 20px;
+	}
 
-#gallery .controls {
-	// text-align: center;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 10px;
-	margin-bottom: 20px;
-}
+	button {
+		border: none;
+		padding: 0.5rem 1rem;
+		font-size: 15px;
+		font-weight: 500;
+		background: none;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
-#gallery button {
-	border: none;
-	padding: 0.5rem 1rem;
-	font-size: 15px;
-	font-weight: 500;
-	background: none;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-}
+		&:active {
+			background-color: #BEB45A;
+		}
 
-#gallery button:active {
-	background-color: #BEB45A;
-}
-
-#gallery button.selected {
-	color: #333; // Correction du contraste
-	background-color: #BEB45A;
+		&.selected {
+			color: #333; // Correction du contraste
+			background-color: #BEB45A;
+		}
+	}
 }
 
 .gal-tile {
@@ -176,34 +204,24 @@ span.swiper-pagination-bullet {
 	/* max-height: 575px; */
 	width: 100%;
 	object-fit: cover;
-}
 
-@media(min-width: 576px) {
-	.gal-tile {
+	@media(min-width: 576px) {
 		width: 575px;
 		height: 575px;
 	}
-}
-@media(min-width: 768px) {
-	.gal-tile {
+	@media(min-width: 768px) {
 		width: 240px;
 		height: 240px;
 	}
-}
-@media(min-width: 992px) {
-	.gal-tile {
+	@media(min-width: 992px) {
 		width: 320px;
 		height: 320px;
 	}
-}
-@media(min-width: 1200px) {
-	.gal-tile {
+	@media(min-width: 1200px) {
 		width: 380px;
 		height: 380px;
 	}
-}
-@media(min-width: 1400px) {
-	.gal-tile {
+	@media(min-width: 1400px) {
 		width: 440px;
 		height: 440px;
 	}
@@ -221,27 +239,30 @@ span.swiper-pagination-bullet {
 	padding-inline: 100px;
 	padding-block: 30px;
 	align-items: center;
-}
 
-.top-header .name {
+	.name {
 	font-size: 26px;
+	}
 }
 
-.nav ul {
-	display: flex;
-	list-style-type: none;
-	font-size: 14px;
-	margin-bottom: 0;
+.nav {
+	ul {
+		display: flex;
+		list-style-type: none;
+		font-size: 14px;
+		margin-bottom: 0;
+
+		li {
+			padding-inline: 10px;
+
+			a {
+				text-decoration: none;
+				color: #000;
+			}
+		}
+	}
 }
 
-.nav li {
-	padding-inline: 10px;
-}
-
-.nav a {
-	text-decoration: none;
-	color: #000
-}
 
 .social-link img {
 	width: 20px;
@@ -278,24 +299,28 @@ span.swiper-pagination-bullet {
 }
 
 #about-me {
-	flex: 2
+	flex: 2;
+
+	&__title {
+		margin-top: 1em;
+		margin-bottom: 60px;
+		font-size: 30px;
+	}
+
+	&__introduction {
+		font-family: 'Spectral';
+		font-weight: 800;
+		font-style: italic;
+		width: 60%;
+		font-size: 1rem; /* corrected from bootstrap h6 */
+	}
+
+	p {
+		width: 80%;
+		font-size: 14px;
+	}
 }
-.about-me__title {
-	margin-top: 1em;
-	margin-bottom: 60px;
-	font-size: 30px;
-}
-.about-me__introduction {
-	font-family: 'Spectral';
-	font-weight: 800;
-	font-style: italic;
-	width: 60%;
-	font-size: 1rem; /* corrected from bootstrap h6 */
-}
-#about-me p {
-	width: 80%;
-	font-size: 14px;
-}
+
 
 .title{
 	text-align: center;
@@ -359,10 +384,8 @@ span.swiper-pagination-bullet {
 	margin-bottom: 0.5rem; /* Imported from bootstrap */
 	line-height: 1.2; /* Imported from bootstrap */
 	font-size: calc(1.375rem + 1.5vw); /* Imported from bootstrap */
-}
 
-@media (min-width: 1200px) { /* Imported from bootstrap */
-	.quote__text { /* Imported from bootstrap */
+	@media (min-width: 1200px) {
 		font-size: 2.5rem; /* Imported from bootstrap */
 	}
 }
@@ -386,39 +409,32 @@ span.swiper-pagination-bullet {
 /* start Imported from bootstrap */
 .container {
 	width: 100%;
-	/* padding-right: var(--bs-gutter-x, 0.75rem); */
-	/* padding-left: var(--bs-gutter-x, 0.75rem); */
 	padding-right: 0.75rem;
 	padding-left: 0.75em;
 	margin-right: auto;
 	margin-left: auto;
-}
 
-@media (min-width: 576px) {
-	.container {
-			max-width: 540px;
+	@media (min-width: 576px) {
+		max-width: 540px;
 	}
-}
-@media (min-width: 768px) {
-	.container {
+
+	@media (min-width: 768px) {
 		max-width: 720px;
 	}
-}
-@media (min-width: 992px) {
-	.container {
+
+	@media (min-width: 992px) {
 		max-width: 960px;
 	}
-}
-@media (min-width: 1200px) {
-	.container {
+
+	@media (min-width: 1200px) {
 		max-width: 1140px;
 	}
-}
-@media (min-width: 1400px) {
-	.container {
+
+	@media (min-width: 1400px) {
 		max-width: 1320px;
 	}
 }
+
 /* end Imported from bootstrap */
 
 #services .container::before{
@@ -457,10 +473,10 @@ span.swiper-pagination-bullet {
 	position: relative;
 	padding-inline: 100px;
 	padding-block: 100px;
-}
 
-#contact .container {
-	display: flex;
+	.container {
+		display: flex;
+	}
 }
 .picture.right::before {
 	content: ' ';
@@ -474,9 +490,13 @@ span.swiper-pagination-bullet {
 }
 
 .form-container {
-	flex : 2;
-
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
+
 .form-container_title {
 	font-size: 1.75rem;
 }
@@ -524,6 +544,11 @@ form textarea {
 input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
+}
+
+div.price {
+	font-size: 1.5rem;
+	// font-size: calc(1.275rem + 0.3vw);
 }
 
 @media all and (max-width: 1180px) {
@@ -579,21 +604,6 @@ input[type="submit"] {
 	.service__description{
 		margin-bottom: 1em;
 	}
-
-	/* start Imported from Bootstrap */
-	.service__price .price {
-		font-size: calc(1.275rem + 0.3vw);
-		border: 1px red solid;
-	}
-
-	@media (min-width: 1200px) {
-		.service__price .price {
-		  font-size: 1.5rem;
-		  background: green;
-		}
-	  }
-	
-	/* end Imported from Bootstrap */
 
 	#services .container::before{
 		width: 30%;
