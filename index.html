@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="index,follow">
-	<link rel="canonical" href="http://127.0.0.1:3000/index.html">
+	<link rel="canonical" href="https://kstl.fr/p8/">
 	<meta name="description" content="Photographe pro en Île-de-France spécialisé en mariages, portraits & événements. Créateur de souvenirs uniques. Portfolio & services photo.">
 	<meta name="keywords" content="Photographe professionnel, Photographie artistique, Mariages et événements, Portrait de qualité, Île-de-France, Moments précieux, Album photo personnalisé, Retouches professionnelles">
 	<meta name="author" content="Nina Carducci">
@@ -15,22 +15,34 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 
-	<title>Nina Carducci - Portfolio</title>
+	<title>Nina Carducci - Photographe en Île-de-France</title>
 
 	<!-- Swiper -->
 	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-	<!-- lightgallery JS -->
+	<!-- lightgallery -->
 	<script defer src="./assets/lightgallery/lightgallery.min.js"></script>
-
-	<!-- lightgallery CSS -->
 	<link type="text/css" rel="stylesheet" href="./assets/lightgallery/css/lightgallery.min.css">
 
 	<!-- default -->
 	<script type="module" src="./assets/js/scripts.prod.js"></script>
 	<link rel="stylesheet" href="./assets/css/style.min.css">
 
+	<!-- social cards -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="Nina Carducci" />
+	<meta name="twitter:creator" content="Nina Carducci" />
+
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:site_name" content="Nina Carducci">
+	<meta property="og:title" content="Nina Carducci - Photographe en Île-de-France">
+	<meta property="og:description" content="Photographe pro en Île-de-France spécialisé en mariages, portraits & événements. Créateur de souvenirs uniques. Portfolio & services photo.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="./assets/images/nina/502.webp">
+	<meta property="og:url" content="https://kstl.fr/p8/">
+
+	<!-- rich snippets -->
 	<script type="application/ld+json">
 		{
 		  "@context": "http://schema.org",
@@ -68,7 +80,6 @@
 	<div class="swiper">
 		<div class="swiper-wrapper"  id="lg-swipper">
 		  <a
-			  data-lg-size="1600-1200"
 			  href="./assets/images/slider/ryoji-iwata/1920.webp"
 			  class="swiper-slide"
 		  >
@@ -87,7 +98,6 @@
 			</a>
 
 			<a
-			data-lg-size="1600-1200"
 			href="./assets/images/slider/nicholas-green/nicholas-green_iolgr2_c_scale,w_1920.webp"
 			class="swiper-slide"
 			>
@@ -105,7 +115,6 @@
 				></picture>
 			</a>
 			<a
-			data-lg-size="1600-1200"
 			href="./assets/images/slider/edward-cisneros/edward-cisneros_io9mlw_c_scale,w_1920.webp"
 			class="swiper-slide"
 			>
@@ -164,7 +173,7 @@
 <div id="gallery">
 	<h2 class="title">Portfolio</h2>
 	<div class="controls">
-		<button type="button" class="selected" data-filter="tous">Tous</button>
+		<button type="button" id="tousButton" class="selected" data-filter="tous">Tous</button>
 		<button type="button" data-filter="concert">Concert</button>
 		<button type="button" data-filter="entreprises">Entreprises</button>
 		<button type="button" data-filter="mariages">Mariages</button>
@@ -192,7 +201,7 @@
 			./assets/images/gallery/concerts/aaron-paul/1920.webp 1920w"
 			data-sub-html="<h4>Photo de - <a href='https://www.facebook.com/p/Aaron-Paul-Photography-100031887472537/' >Aaron-Paul </a></h4><p> Pancho Bazzara Tour 2022 </p>"
 		>
-			<img class="gal-tile" src="./assets/images/gallery/concerts/aaron-paul/thumb.webp"
+			<img class="gal-tile" loading="lazy" src="./assets/images/gallery/concerts/aaron-paul/thumb.webp"
 			alt="Dans la foule enthousiaste lors de la tournée Pancho Bazzara">
 		</a>
 
@@ -208,7 +217,7 @@
 			./assets/images/gallery/entreprise/ali-morshedlou/1826.webp 1826w,
 			./assets/images/gallery/entreprise/ali-morshedlou/1920.webp 1920w"
 		>
-			<img class="gal-tile" src="./assets/images/gallery/entreprise/ali-morshedlou/thumb.webp"
+			<img class="gal-tile" loading="lazy" src="./assets/images/gallery/entreprise/ali-morshedlou/thumb.webp"
 			alt="Portrait d'un jeune homme d'affaire">
 		</a>
 		
@@ -222,7 +231,7 @@
 			./assets/images/gallery/entreprise/jason-goodman/1734.webp 1734w,
 			./assets/images/gallery/entreprise/jason-goodman/1920.webp 1920w"
 		>
-			<img class="gal-tile" src="./assets/images/gallery/entreprise/jason-goodman/thumb.webp"
+			<img class="gal-tile" loading="lazy" src="./assets/images/gallery/entreprise/jason-goodman/thumb.webp"
 			alt="Rires au sein d'une réunion d'entreprise">
 		</a>
 
@@ -237,7 +246,7 @@
 			./assets/images/gallery/mariage/hannah-busing/1878.webp 1878w,
 			./assets/images/gallery/mariage/hannah-busing/1920.webp 1920w"
 		>
-			<img class="gal-tile" src="./assets/images/gallery/mariage/hannah-busing/thumb.webp"
+			<img class="gal-tile" loading="lazy" src="./assets/images/gallery/mariage/hannah-busing/thumb.webp"
 			alt="Deux mains se touchent, symbolisant la tendresse et l'union">
 		</a>
 
@@ -260,7 +269,7 @@
 			./assets/images/gallery/portraits/ade-tunji/1918.webp 1918w,
 			./assets/images/gallery/portraits/ade-tunji/1920.webp 1920w"
 		>
-		<img class="gal-tile" src="./assets/images/gallery/portraits/ade-tunji/thumb.webp"
+		<img class="gal-tile" loading="lazy" src="./assets/images/gallery/portraits/ade-tunji/thumb.webp"
 			alt="Portrait d'un homme avec aux yeux fermés">
 		</a>
 			
@@ -282,7 +291,7 @@
 			./assets/images/gallery/mariage/jakob-owens/1886.webp 1886w,
 			./assets/images/gallery/mariage/jakob-owens/1920.webp 1920w"
 		>
-		<img class="gal-tile" src="./assets/images/gallery/mariage/jakob-owens/thumb.webp"
+		<img class="gal-tile" loading="lazy" src="./assets/images/gallery/mariage/jakob-owens/thumb.webp"
 			alt="Jeune couple marié, main dans la main, souriants">
 		</a>
 
@@ -305,7 +314,7 @@
 			./assets/images/gallery/portraits/nino-van-prattenburg/1911.webp 1911w,
 			./assets/images/gallery/portraits/nino-van-prattenburg/1920.webp 1920w"
 		>
-		<img class="gal-tile" src="./assets/images/gallery/portraits/nino-van-prattenburg/thumb.webp"
+		<img class="gal-tile" loading="lazy" src="./assets/images/gallery/portraits/nino-van-prattenburg/thumb.webp"
 			alt="Portrait d'une jeune femme, vue à travers un grillage">
 		</a>
 
@@ -320,7 +329,7 @@
 			./assets/images/gallery/concerts/austin-neill/1651.webp 1651w,
 			./assets/images/gallery/concerts/austin-neill/1920.webp 1920w"
 		>
-		<img class="gal-tile" src="./assets/images/gallery/concerts/austin-neill/thumb.webp"
+		<img class="gal-tile" loading="lazy" src="./assets/images/gallery/concerts/austin-neill/thumb.webp"
 			alt="Tunde Adebimpe du groupe de rock 'TV on the Radio' sur scene">
 		</a>
 
@@ -334,7 +343,7 @@
 			./assets/images/gallery/entreprise/mateus-campos-felipe/1454.webp 1454w,
 			./assets/images/gallery/entreprise/mateus-campos-felipe/1920.webp 1920w"
 		>
-		<img class="gal-tile" src="./assets/images/gallery/entreprise/mateus-campos-felipe/thumb.webp"
+		<img class="gal-tile" loading="lazy" src="./assets/images/gallery/entreprise/mateus-campos-felipe/thumb.webp"
 			alt="De la bonne humeur au travail devant son ordinateur">
 		</a>
 	</div>
@@ -377,7 +386,7 @@
 				<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
 			</div>
 			<div class="service__price">
-				<p class="price">400€ album A4</p>
+				<div class="price">400€ album A4</div>
 				<p>30 pages recto/verso</p>
 			</div>
 		</div>
@@ -386,7 +395,7 @@
 <div class="quote">
 	<figure>
 		<blockquote>
-			<h1 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h1>
+			<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
 		</blockquote>
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
@@ -408,6 +417,7 @@
 		</div>
 		<div class="picture right">
 			<img
+			loading="lazy" 
 			sizes="(max-width: 1920px) 100vw, 1920px"
 			srcset="
 			./assets/images/camera/camera_wii6uv_c_scale,w_200.webp 200w,

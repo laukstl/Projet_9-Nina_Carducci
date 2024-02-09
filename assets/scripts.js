@@ -20,6 +20,13 @@ const swiper = new Swiper('.swiper', {
     }
   },
 
+  loop: true,
+
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
+
   pagination: {
     el: '.swiper-pagination',
     clickable: true
@@ -47,7 +54,8 @@ if (lgElement !== null) {
 document.addEventListener('DOMContentLoaded', () => {
     const galButtons = document.querySelectorAll('#gallery button');
     const galPictures = document.querySelectorAll('#gallery a');
-    let selectedButton = null;
+    const tousButton = document.getElementById('tousButton');
+    let selectedButton = tousButton;
 
     galButtons.forEach((button) => {
         button.addEventListener('mouseup', () => {
